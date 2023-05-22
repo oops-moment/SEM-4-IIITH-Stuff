@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 3}
+\begin{document}
+
+\maketitle
+
+\section{Properties of Quantum State}
+
+
+ Let $ \chi $ be a Hilbert Space. For any quantum state  $|\psi> \hspace{1mm}\epsilon \hspace{1mm}\chi $, 
+ $<\psi | \psi >$ = 1 . Consider an operator A that acts on $|\psi> $ such that \\ 
+ A$|\psi> $ = $|\psi^{\raisebox{0.5pt}{$\scriptstyle\prime$}}> $ \\
+ for  $|\psi^{\raisebox{0.5pt}{$\scriptstyle\prime$}}> $ to be valid quantum state  $<\psi^{\raisebox{0.5pt}{$\scriptstyle\prime$}} 
+ |$  $\psi^{\raisebox{0.5pt}{$\scriptstyle\prime$}} >$ =1 \\
+
+Since we said that $|\psi^{\raisebox{0.5pt}{$\scriptstyle\prime$}}> $ =A$|\psi> $  \\
+ hence $|\psi' >= \bar{A}|\psi>$, \\taking dagger on both sides we get \\$|\psi'>^{\dagger} = \bar{A}|\psi>)^{\dagger}$ \\
+ Hence, we obtain $\langle \bar{\psi} | = \langle \psi | A^{\dagger}$ \\
+Combining the results, we get $\langle \psi | A^{\dagger} A \bar{\psi} \rangle = 1$,\\
+since $\langle \psi |$ is a state, hence $\langle \psi | \psi \rangle = 1$. \\Thus, we obtain $A \bar{A}^{\dagger} = 1$.
+\\ 
+\\
+
+\section{Nowry Quantum Theory}
+
+Assuming that $|\psi\rangle$ belongs to Hilbert space $X$ such that $\langle \psi|\psi \rangle = 1$.
+\\
+Let us consider $X_a$ and $X_b$ as Hilbert spaces, then the Hilbert space of the composite system will be $X_a \otimes X_b$.
+\\
+Let the dimension of $X_a$ be $d_a$ and the dimension of $X_b$ be $d_b$, then the dimension of the composite system will be $d_a \times d_b$.
+\\
+Here is an example of calculating the tensor product of two matrices // //
+
+
+\section{Expectation}
+Now we will see expectation of observable $A$, $\langle A \rangle = \langle \psi | A^{\dagger} | \psi \rangle$. This is expectation with respect to state $\langle \psi |$.
+Say $e^{i\theta}|\psi\rangle$ be the state we are considering, then the expectation is given by \\
+$\langle \psi |A^{\dagger} | \psi \rangle$.
+ substituting the values we get: \\
+
+$\langle e^{i\theta}|\psi\rangle |A^{\dagger} | e^{i\theta}|\psi\rangle = \langle\psi|e^{-i\theta}A^{\dagger}e^{i\theta}|\psi\rangle = \langle\psi|A^{\dagger}|\psi\rangle$,
+
+which is the same as $\langle \psi |A^{\dagger} | \psi \rangle$, hence they would give the same measurement.
+\\
+This also shows that the expectation of A does not change under unitary transformation.
+
+\section{Density Operators}
+A quantum state is represented by a density operator defined over Hilbert space $\mathcal{H}$. Naturally, operators map elements of one Hilbert space to another, but this one maps to the same Hilbert space.
+
+The properties of density operators are:
+\begin{enumerate}
+\item $e \geq 0$ (non-negative)
+\item $e = e^{\dagger}$ (Hermitian)
+\item $\text{Trace}(e) = 1$ (normalization)
+\\
+\\
+A density operator can be represented as the outer product of a state vector, $|\psi\rangle$, with its conjugate, $\langle\psi|$, such that:
+$\rho = |\psi\rangle\langle\psi|$ 
+
+It is also true that 
+$\rho = \langle\psi|\psi\rangle \ |\psi\rangle\langle\psi|$ =  $|\psi\rangle\langle\psi|$
+\\
+\\
+The outer product $|\psi\rangle\langle\psi|$ is a Hermitian operator, meaning that it is equal to its own adjoint/conjugate transpose:
+
+$(|\psi\rangle\langle\psi|)^{\dagger} = |\psi\rangle\langle\psi|$
+
+This is a direct result of the inner product of two state vectors being a scalar and therefore it is a hermitian operator.
+\\
+\\
+Any Hermitian operator can be written in terms of its eigenvectors and eigenvalues. This is known as the spectral decomposition of the operator.
+
+For a given Hermitian operator $\rho$, its spectral decomposition can be written as:
+$\rho = \sum_i p_i |i\rangle\langle i|$
+
+Where $|i\rangle$ are the eigenvectors of the operator and $p_i$ are the corresponding eigenvalues. The eigenvalues are non-negative and add up to 1.
+\\
+\\
+It is possible for different density operators to represent the same quantum state. This is because density operators are defined up to a constant factor. For example,\\ suppose we have two density operators, $\rho_1 = \frac{1}{2} |\psi\rangle\langle\psi|$ and $\rho_2 = |\psi\rangle\langle\psi|$. Both of these operators represent the same quantum state $|\psi\rangle$, but they are defined up to a constant factor of $\frac{1}{2}$.
+
+
+
+
+\end{enumerate}
+\end{document}
